@@ -7,7 +7,15 @@ List<Creature> creatures = new List<Creature>
     new Creature("Senn", "Cloud Moth", 41)
 };
 
-// TODO: Konverter objektene til linjer og skriv dem til fil.
-// TODO: Les filen.
-// TODO: Rekonstruer gyldige Creature-objekter i en ny liste.
-// TODO: Skriv resultatet.
+// Konverter og skriv
+string[] creaturesText = Converter.ConvertAllToText(creatures);
+File.WriteAllLines(path, creaturesText);
+
+// Konverter tilbake og les
+string[] loadedCreatures = File.ReadAllLines(path);
+List<Creature> loadedCreatureObjects = Converter.ConvertAllToCreature(loadedCreatures);
+foreach(Creature creature in loadedCreatureObjects)
+{
+    // Override tostring i creature klassen
+    Console.WriteLine(creature);
+}

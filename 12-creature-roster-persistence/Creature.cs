@@ -10,7 +10,5 @@ public class Creature
         Species = species;
         Energy = energy;
     }
-
-    // TODO: Det er valgfritt om konvertering/parsing legges her
-    // eller i egne metoder/klasser.
+    public override string ToString() => $"{Name}|{Species}|{Energy}";
 }

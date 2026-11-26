@@ -4,17 +4,21 @@ public class ArtifactCatalog
 
     public void Add(Artifact artifact)
     {
-        // TODO
+        artifacts.Add(artifact);
     }
 
     public void PrintAll()
     {
-        // TODO
+        // Override tostring i artifact.cs
+        foreach(Artifact artifact in artifacts) Console.WriteLine(artifact);
     }
 
     public Artifact? FindByName(string name)
     {
-        // TODO: Finn manuelt med løkke.
+        foreach (Artifact artifact in artifacts)
+        {
+            if(artifact.Name == name) return artifact;
+        }
         return null;
     }
 }

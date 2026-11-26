@@ -8,4 +8,6 @@ public class Artifact
         Name = name;
         Origin = origin;
     }
+
+    public override string ToString() => $"Name: {Name} | Origin: {Origin}";
 }

@@ -9,15 +9,7 @@ public class Drone
         FlightHours = flightHours;
     }
 
-    public string Describe()
-    {
-        // TODO
-        return "";
-    }
+    public string Describe() => $"DRONE NAME: {Name} | FLIGHT HOURS: {FlightHours}";
 
-    public bool NeedsService()
-    {
-        // TODO
-        return false;
-    }
+    public bool NeedsService() => FlightHours >= 100;
 }

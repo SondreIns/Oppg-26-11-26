@@ -6,6 +6,6 @@ public class Beacon
     public Beacon(int frequency)
     {
         Frequency = frequency;
-        // TODO: Oppdater CreatedCount.
+        CreatedCount++;
     }
 }

@@ -4,8 +4,7 @@ class Program
     {
         PrintTransmission("System ready");
         PrintTransmission("Dock", "Gate unlocked");
-
-        // TODO: Kall også din tredje overload.
+        PrintTransmission("Lemming of the BDA", "Keep your teeth clean", 3);
     }
 
     static void PrintTransmission(string message)
@@ -18,5 +17,11 @@ class Program
         Console.WriteLine($"[{sender}] {message}");
     }
 
-    // TODO: Lag tredje overload.
+    static void PrintTransmission(string sender, string message, int numRepeats)
+    {
+        for(int i = 0; i < numRepeats; i++)
+        {
+            Console.WriteLine($"[{sender}] {message}");
+        }
+    }
 }
